@@ -1,6 +1,6 @@
 // Replace these placeholders before launch.
-const WHATSAPP_NUMBER = "const WHATSAPP_NUMBER = "918810559546";; // digits only, e.g. 919876543210
-const INSTAGRAM_URL = "https://instagram.com/yourusername";
+const WHATSAPP_NUMBER = "const WHATSAPP_NUMBER = "918810559546"; // digits only, e.g. 919876543210
+const INSTAGRAM_URL = "https://instagram.com/guitarhubindia";
 const cart = [];
 const money = n => "₹" + Number(n).toLocaleString("en-IN");
 const wa = message => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
