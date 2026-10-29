@@ -3,6 +3,6 @@
   "name": "guitar-guy-store",
   "compatibility_date": "2026-10-29",
   "assets": {
-    "directory": "."
+    "directory": "./public"
   }
 }
