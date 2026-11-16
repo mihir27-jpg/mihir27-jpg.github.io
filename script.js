@@ -48,3 +48,36 @@ document.getElementById("custom-form").onsubmit = e => {
   window.open(wa(`Hi Guitar Guy! I'd like a custom guitar art design.\nName: ${name}\nDesign idea: ${idea}\nBudget: ${budget}\nPlease discuss final price and delivery timeline.`), "_blank", "noopener");
 };
 renderCart();
+
+/* Guitar Guy India - Scroll Reveal Animation */
+document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll(
+    ".section-head, .products, .product, .custom, .story-grid, footer"
+  );
+
+  if (!("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => {
+      element.classList.add("scroll-visible");
+    });
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("scroll-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12
+    }
+  );
+
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+});
+
