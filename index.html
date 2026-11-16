@@ -49,14 +49,22 @@
   }
 }
 
-/* Animations for the rest of the website */
+
+/* Scroll Reveal Animation */
 .section-head,
 .products,
 .product,
 .custom,
 .story-grid,
 footer {
-  animation: guitarHeroEnter 1.8s ease-out both;
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -66,9 +74,15 @@ footer {
   .custom,
   .story-grid,
   footer {
-    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
+
+    
+
+  
 
   </style>
 <link rel="icon" type="image/png" href="images/guitarhub-favicon.png">
