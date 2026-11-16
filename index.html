@@ -49,6 +49,27 @@
   }
 }
 
+/* Animations for the rest of the website */
+.section-head,
+.products,
+.product,
+.custom,
+.story-grid,
+footer {
+  animation: guitarHeroEnter 1.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-head,
+  .products,
+  .product,
+  .custom,
+  .story-grid,
+  footer {
+    animation: none;
+  }
+}
+
   </style>
 <link rel="icon" type="image/png" href="images/guitarhub-favicon.png">
 </head>
