@@ -83,7 +83,26 @@ footer {
     
 
   
+/* Scroll Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
   </style>
 <link rel="icon" type="image/png" href="images/guitarhub-favicon.png">
 </head>
